@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+body{
+    background-color:white;
+}
+@font-face {
+    font-family: "Noto Sans";
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+@font-face {
+    font-family: "Recoleta";
+    src: url('../fonts/Recoleta-SemiBold.ttf');
+}
+$font1: 'Recoleta';
+$font2: "Noto Sans";
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    @media (max-width: 1200px){
+        width: unset;
+        padding: 0 30px;
+    }
+}
+
+.header{
+    background: #163A24;
+    padding: 25px 0;
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu{
+        display: flex;
+        @media (max-width: 650px) {
+            display: none;
+        }
+        &__list{
+            display: flex;
+            align-items: center;
+        }
+
+        &__item{
+            margin-right: 24px;
+        }
+
+        &__link{
+            font-family: $font2;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: right;
+            color: #FBFAF7;
+        }
+        
+    }
+
+    &__btn{
+        font-family: $font2;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FBFAF7;
+        text-align: right;
+        background: #198C36;
+        border-radius: 160px;
+        padding: 18px 25px;
+    }
+    &__burger{
+        display: none;
+        @media (max-width: 650px) {
+            align-items: center;
+            display: flex;
+        }
+    }    
+}
+.intro{
+    background: #163A24;
+    &__wrap{
+        display: flex;
+        align-items: center;
+        @media (max-width: 650px) {
+            flex-wrap: wrap;
+        }
+    }
+
+
+    &__title{
+        font-family: $font1;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 65px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FBFAF7;
+
+
+    }
+    &__text{
+        font-family: $font2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FBFAF7;
+
+
+    }
+    &__img{
+        width: 738px;
+        height: 580px;
+        @media (max-width: 1200px) {
+            height: 360px;
+            align-self: flex-end;
+            img{
+            width: 100%;
+            height: 360px;
+            }
+        
+        
+        }
+    }
+}
+.second{
+    padding-top: 120px;
+    &__wrap{
+        display: flex;
+        flex-direction: column
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @media (max-width: 968px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__texts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 376px;
+        @media (max-width: 965px) {
+            margin-bottom: 30px;
+            &:last-of-type{
+                order: 1;
+            }
+        }
+    }
+    &__title{
+        font-family: $font1;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 54px;
+        color: #163A24;
+        margin-bottom: 27px;
+        @media (max-width: 700px) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+    &__text{
+        font-family: $font2;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #163A24;
+        @media (max-width: 700px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    &__img{
+        @media (max-width: 965px) {
+            margin-bottom: 30px;
+            &:last-of-type{
+                order: 0;
+            }
+        }
+        @media (max-width: 500px) {
+            width: 300px;
+            height: 280px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.third{
+    &__wrap{
+        padding-top: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__title{
+        font-family: $font1;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 54px;
+        color: #163A24;
+        margin-bottom: 27px;
+    }
+    &__imgs{
+        display: block;
+    }
+    &__images{
+        justify-content: space-between;
+    }
+}
